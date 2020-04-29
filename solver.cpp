@@ -18,263 +18,141 @@ using namespace solver;
      }
 
 
+    RealVariable& solver::operator+(const double y, RealVariable& x){
+        return x;
+    }
+    RealVariable& solver::operator+(RealVariable& x, const double y){
+        return x;
+    }
+    RealVariable& solver::operator+(RealVariable& y, RealVariable& x){
+        return x;
+    }
+
+    RealVariable& solver::operator-(const double y, RealVariable& x){
+        return x;
+    }
+    RealVariable& solver::operator-(RealVariable& x, const double y){
+        return x;
+    }
+    RealVariable& solver::operator-(RealVariable& y, RealVariable& x){
+        return x;
+    }
+
+    RealVariable& solver::operator*(const double y, RealVariable& x){
+        return x;
+    }
+    RealVariable& solver::operator*(RealVariable& x, const double y){
+        return x;
+    }
+    RealVariable& solver::operator*(RealVariable& y, RealVariable& x){
+        return x;
+    }
+
+    RealVariable& solver::operator/(const double y, RealVariable& x){
+        return x;
+    }
+    RealVariable& solver::operator/(RealVariable& x, const double y){
+        return x;
+    }
+    RealVariable& solver::operator/(RealVariable& y, RealVariable& x){
+        return x;
+    }
+
+    RealVariable& solver::operator==(const double y, RealVariable& x){
+        return x;
+    }
+    RealVariable& solver::operator==(RealVariable& x, const double y){
+        return x;
+    }
+    RealVariable& solver::operator==(RealVariable& y, RealVariable& x){
+        return x;
+    }
+
+    RealVariable& solver::operator^(RealVariable& x, const double y){
+        return x;
+    }
 
 
- 
+ComplexVariable& solver::operator+(const double y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator+(ComplexVariable& x, const double y){
+      return x;
+  }
+ComplexVariable& solver::operator+(ComplexVariable& y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator+(complex<double> num,ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator+(ComplexVariable& x ,complex<double> num){
+      return x;
+  }
 
+ ComplexVariable& solver::operator-(const double y, ComplexVariable& x){
+      return x;
+  }
+ ComplexVariable& solver::operator-(ComplexVariable& x, const double y){
+      return x;
+  }
+ ComplexVariable& solver::operator-(ComplexVariable& y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator-(complex<double> num,ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator-(ComplexVariable& x ,complex<double> num){
+      return x;
+  }
 
+ ComplexVariable& solver::operator*(const double y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator*(ComplexVariable& x, const double y){
+      return x;
+  }
+ComplexVariable& solver::operator*(ComplexVariable& y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator*(complex<double> num,ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator*(ComplexVariable& x ,complex<double> num){
+      return x;
+  }
 
-/**All the operators of RealVariable**/
-// For arguments like: number*x
-RealVariable& solver::operator*(const double number,RealVariable& x)
-{
-    return x;
-}
+ComplexVariable& solver::operator/(const double y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator/(ComplexVariable& x, const double y){
+      return x;
+  }
+ComplexVariable& solver::operator/(ComplexVariable& y, ComplexVariable& x){
+      return x;
+  }
+ ComplexVariable& solver::operator/(complex<double> num,ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator/(ComplexVariable& x ,complex<double> num){
+      return x;
+  }
 
-// For arguments like: x*number
-RealVariable& solver::operator*(RealVariable& x, const double number)
-{
-    return x;
-}
+ComplexVariable& solver::operator==(const double y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator==(ComplexVariable& x, const double y){
+      return x;
+  }
+ComplexVariable& solver::operator==(ComplexVariable& y, ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator==(complex<double> num,ComplexVariable& x){
+      return x;
+  }
+ComplexVariable& solver::operator==(ComplexVariable& x ,complex<double> num){
+      return x;
+  }
 
-// For arguments like: x1*x2
-RealVariable& solver::operator*(RealVariable& x1, RealVariable& x2)
-{
-    return x1;
-}
-
-// For arguments like: number/x
-RealVariable& solver::operator/(const double number,RealVariable& x)
-{
-    return x;
-}
-
-// For arguments like: x/number
-RealVariable& solver::operator/(RealVariable& x, const double number)
-{
-    return x;
-}
-
-// For arguments like: x1/x2
-RealVariable& solver::operator/(RealVariable& x1, RealVariable& x2)
-{
-    return x1;
-}
-
-// For arguments like: number+x
-RealVariable& solver::operator+(const double number,RealVariable& x)
-{
-    return x;
-}
-
-// For arguments like: x+number
-RealVariable& solver::operator+(RealVariable& x, const double number)
-{
-    return x;
-}
-
-// For arguments like: x1+x2
-RealVariable& solver::operator+(RealVariable& x1, RealVariable& x2)
-{
-    return x1;
-}
-
-// For arguments like: number-x
-RealVariable& solver::operator-(const double number,RealVariable& x)
-{
-    return x;
-}
-
-// For arguments like: x-number
-RealVariable& solver::operator-(RealVariable& x, const double number)
-{
-    return x;
-}
-
-// For arguments like: x1-x2
-RealVariable& solver::operator-(RealVariable& x1, RealVariable& x2)
-{
-    return x1;
-}
-
-// For arguments like: number==x
-RealVariable& solver::operator==(const double number,RealVariable& x)
-{
-    return x;
-}
-
-//For arguments like: x==number
-RealVariable& solver::operator==(RealVariable& x, const double number)
-{
-    return x;
-}
-
-// For arguments like: x1==x2
-RealVariable& solver::operator==(RealVariable& x1, RealVariable& x2)
-{
-    return x1;
-}
-
-// For arguments like: x^number
-RealVariable& solver::operator^(RealVariable& x, const double number)
-{
-    return x;
-}
-
-/**All the operators of ComplexVariable**/
-// For arguments like: number*y
-ComplexVariable& solver::operator*(const double number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y*number
-ComplexVariable& solver::operator*(ComplexVariable& y, const double number)
-{
-    return y;
-}
-
-// For arguments like: y1*y2
-ComplexVariable& solver::operator*(ComplexVariable& y1, ComplexVariable& y2)
-{
-    return y1;
-}
-
-// // For arguments like: doubleComplex*y
-// ComplexVariable& solver::operator*(complex<double> number,ComplexVariable& y)
-// {
-//     return y;
-// }
-
-// // For arguments like: y*doubleComplex
-// ComplexVariable& solver::operator*(ComplexVariable& y ,complex<double> number)
-// {
-//     return y;
-// }
-
-
-// For arguments like: number/y
-ComplexVariable& solver::operator/(const double number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y/number
-ComplexVariable& solver::operator/(ComplexVariable& y, const double number)
-{
-    return y;
-}
-
-// For arguments like: y1/y2
-ComplexVariable& solver::operator/(ComplexVariable& y1, ComplexVariable& y2)
-{
-    return y1;
-}
-
-// // For arguments like: doubleComplex/y
-// ComplexVariable& solver::operator/(complex<double> number,ComplexVariable& y)
-// {
-//     return y;
-// }
-
-// // For arguments like: y/doubleComplex
-// ComplexVariable& solver::operator/(ComplexVariable& y ,complex<double> number)
-// {
-//     return y;
-// }
-
-// For arguments like: number+y
-ComplexVariable& solver::operator+(const double number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y+number
-ComplexVariable& solver::operator+(ComplexVariable& y, const double number)
-{
-    return y;
-}
-
-// For arguments like: y1+y2
-ComplexVariable& solver::operator+(ComplexVariable& y1, ComplexVariable& y2)
-{
-    return y1;
-}
-
-// For arguments like: doubleComplex+y
-ComplexVariable& solver::operator+(complex<double> number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y+doubleComplex
-ComplexVariable& solver::operator+(ComplexVariable& y ,complex<double> number)
-{
-    return y;
-}
-
-// For arguments like: number-y
-ComplexVariable& solver::operator-(const double number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y-number
-ComplexVariable& solver::operator-(ComplexVariable& y, const double number)
-{
-    return y;
-}
-
-// For arguments like: y1-y2
-ComplexVariable& solver::operator-(ComplexVariable& y1, ComplexVariable& y2)
-{
-    return y1;
-}
-
-// // For arguments like: doubleComplex-y
-// ComplexVariable& solver::operator-(complex<double> number,ComplexVariable& y)
-// {
-//     return y;
-// }
-
-// // For arguments like:  y-doubleComplex
-// ComplexVariable& solver::operator-(ComplexVariable& y ,complex<double> number)
-// {
-//     return y;
-// }
-
-// For arguments like: number==y
-ComplexVariable& solver::operator==(const double number,ComplexVariable& y)
-{
-    return y;
-}
-
-// For arguments like: y==number
-ComplexVariable& solver::operator==(ComplexVariable& y, const double number)
-{
-    return y;
-}
-
-// For arguments like: y1==y2
-ComplexVariable& solver::operator==(ComplexVariable& y1, ComplexVariable& y2)
-{
-    return y1;
-}
-
-// // For arguments like:doubleComplex==y
-// ComplexVariable& solver::operator==(complex<double> number,ComplexVariable& y)
-// {
-//     return y;
-// }
-
-// // For arguments like: y==doubleComplex
-// ComplexVariable& solver::operator==(ComplexVariable& y ,complex<double> number)
-// {
-//     return y;
-// }
-
-// For arguments like: x^number
-ComplexVariable& solver::operator^(ComplexVariable& y, const double number)
-{
-    return y;
-}
+ ComplexVariable& solver::operator^(ComplexVariable& x, const double y){
+      return x;
+  }
