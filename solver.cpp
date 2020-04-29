@@ -201,17 +201,17 @@ ComplexVariable& solver::operator+(ComplexVariable& y1, ComplexVariable& y2)
     return y1;
 }
 
-// // For arguments like: doubleComplex+y
-// ComplexVariable& solver::operator+(complex<double> number,ComplexVariable& y)
-// {
-//     return y;
-// }
+// For arguments like: doubleComplex+y
+ComplexVariable& solver::operator+(complex<double> number,ComplexVariable& y)
+{
+    return y;
+}
 
-// // For arguments like: y+doubleComplex
-// ComplexVariable& solver::operator+(ComplexVariable& y ,complex<double> number)
-// {
-//     return y;
-// }
+// For arguments like: y+doubleComplex
+ComplexVariable& solver::operator+(ComplexVariable& y ,complex<double> number)
+{
+    return y;
+}
 
 // For arguments like: number-y
 ComplexVariable& solver::operator-(const double number,ComplexVariable& y)

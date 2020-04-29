@@ -49,7 +49,11 @@ namespace solver{
     friend ComplexVariable& operator+(const double y, ComplexVariable& x);
     friend ComplexVariable& operator+(ComplexVariable& x, const double y);
     friend ComplexVariable& operator+(ComplexVariable& y, ComplexVariable& x);
+// For arguments like: doubleComplex+y
+friend ComplexVariable& operator+(complex<double> number,ComplexVariable& y);
 
+// For arguments like: y+doubleComplex
+friend ComplexVariable& operator+(ComplexVariable& y ,complex<double> num);
     friend ComplexVariable& operator-(const double y, ComplexVariable& x);
     friend ComplexVariable& operator-(ComplexVariable& x, const double y);
     friend ComplexVariable& operator-(ComplexVariable& y, ComplexVariable& x);
